@@ -1,16 +1,17 @@
-
+import React from 'react';
 import './App.css';
+import MainComponent from './Component/MainComponent';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <MainComponent />
 
-        <p>
-          Ashraful Alam from Daffodil International University!
-        </p>
 
-      </header>
+      <p>
+        Ashraful Alam from Daffodil International University!
+      </p>
     </div>
   );
 }
