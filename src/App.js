@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <MainComponent />
 
-
       <p>
         Ashraful Alam from Daffodil International University!
       </p>
