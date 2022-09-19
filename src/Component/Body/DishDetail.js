@@ -13,9 +13,13 @@ const DishDetail = props => {
                 <CardBody style={{ textAlign: "left" }}>
                     <CardTitle>{props.dish.name}</CardTitle>
                     <CardText>
-                        <p>{props.dish.description}</p>
-                        <p>${props.dish.price}</p>
-                        <p>{props.dish.category}</p>
+                        {props.dish.description}
+                    </CardText>
+                    <CardText>
+                        ${props.dish.price}
+                    </CardText>
+                    <CardText>
+                        {props.dish.category}
                     </CardText>
                     <hr />
                     <LoadComments comments={props.dish.comments} />
