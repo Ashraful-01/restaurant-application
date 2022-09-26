@@ -11,17 +11,17 @@ class Navigation extends Component {
     }
     navToggle = () => {
         this.setState({
-            isNavOpen: this.state.isNavOpen
+            isNavOpen: !this.state.isNavOpen
         })
     }
     render() {
         return (
             <div>
                 <Navbar dark color="dark" expand="sm">
-                    <div className='container'>
-                        <NavbarToggler onClick={this.state.navToggle} />
+                    <div className="container">
+                        <NavbarToggler onClick={this.navToggle} />
                         <NavbarBrand href="/">FARISTA RESTAURANT </NavbarBrand>
-                        <Collapse isNavOpen={this.state.isNavOpen} navbar>
+                        <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="mr-auto" Navbar>
                                 <NavItem>
                                     <Link to="/" className="nav-link active">Home</Link>
