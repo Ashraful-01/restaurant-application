@@ -12,7 +12,7 @@ const MainComponent = () => {
             <Body />
             <Footer />
 
-            <p>This is another Component!</p>
+
         </div>
     );
 }
