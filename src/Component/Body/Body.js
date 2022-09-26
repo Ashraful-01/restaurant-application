@@ -6,7 +6,6 @@ import About from './About';
 import { Route, Redirect, Routes } from 'react-router-dom';
 
 
-
 const Body = () => {
     return (
         <div>
