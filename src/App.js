@@ -1,16 +1,18 @@
 import React from 'react';
 import './App.css';
 import MainComponent from './Component/MainComponent';
+import { BrowserRouter } from 'react-router-dom'
 
 
 function App() {
   return (
     <div className="App">
-      <MainComponent />
+      <BrowserRouter>
+        <MainComponent />
+      </BrowserRouter>
 
-      <p>
-        Ashraful Alam from Daffodil International University!
-      </p>
+
+
     </div>
   );
 }
