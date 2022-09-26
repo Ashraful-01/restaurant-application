@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 
 const Navigation = () => {
