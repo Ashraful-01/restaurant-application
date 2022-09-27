@@ -12,7 +12,7 @@ const Body = () => {
         <div>
             <Routes>
                 <Route path="/home" element={<Home />} />
-                <Route path="/Menu" element={<Menu />} />
+                <Route path="/menu" element={<Menu />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
             </Routes>
