@@ -16,7 +16,7 @@ const DishDetail = props => {
                         {props.dish.description}
                     </CardText>
                     <CardText>
-                        ${props.dish.price}
+                        ${props.dish.price}/-
                     </CardText>
                     <CardText>
                         {props.dish.category}

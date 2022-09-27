@@ -8,9 +8,10 @@ import { Route, Redirect, Routes } from 'react-router-dom';
 
 const Body = () => {
     return (
+
         <div>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/Menu" element={<Menu />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
