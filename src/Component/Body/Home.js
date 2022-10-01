@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import COMMENTS from '../../data/Comments';
-import DISHES from '../../data/Dishes';
+
 
 
 const mapStateToProps = state => {
-    console.log("mapStateToProps:", state);
+    // console.log("mapStateToProps:", state);
     return {
-        dishes: DISHES,
-        comments: COMMENTS
+        dishes: state.dishes,
+        sample: state.sample
     }
 }
 
 class Home extends Component {
 
-    componentDidMout() {
-        console.log("Home state : ", this.state);
+    componentDidMount() {
         console.log("Home Props:", this.props);
+        this.props.dispatch({
+            type: 'TEST',
+            str: "daffodil International University"
+        })
+    }
+
+    componentDidUpdate() {
+        console.log("Home props Updated :", this.props);
     }
 
     render() {
