@@ -3,7 +3,8 @@ import COMMENTS from '../data/Comments';
 
 const initialState = {
     dishes: DISHES,
-    comments: COMMENTS
+    comments: COMMENTS,
+    sample: "hello World"
 }
 
 
