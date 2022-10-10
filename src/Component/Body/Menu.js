@@ -50,6 +50,7 @@ class Menu extends Component {
                     key={item.id}
                     onDishSelect={() => this.onDishSelect(item)}
                 />
+
             );
         })
         let dishDetail = null;
@@ -61,6 +62,7 @@ class Menu extends Component {
                 comments={comments}
                 addComment={this.props.addComment}
             />
+
         }
         return (
             <div className="container">
@@ -81,6 +83,7 @@ class Menu extends Component {
 
                 </div>
             </div>
+
         );
     }
 }
