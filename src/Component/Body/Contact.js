@@ -39,7 +39,7 @@ class Contact extends Component {
                             <FormGroup row>
                                 <Label htmlFor="firstname" md={2} >First Name</Label>
                                 <Col md={10}>
-                                    <Control.text
+                                    <Control.Text
                                         model=".firstname"
                                         name="firstname"
                                         placeholder="First Name"
@@ -62,7 +62,7 @@ class Contact extends Component {
                             <FormGroup row>
                                 <Label htmlFor="lastname" md={2}>Last Name</Label>
                                 <Col md={10}>
-                                    <Control.text
+                                    <Control.Text
                                         model=".lastname"
                                         name="lastname"
                                         placeholder="Last Name"
@@ -85,11 +85,11 @@ class Contact extends Component {
                             <FormGroup row>
                                 <Label htmlFor="telnum" md={2}>Contact tel.</Label>
                                 <Col md={10}>
-                                    <Control.text
+                                    <Control.Text
                                         model=".telnum"
                                         name="telnum"
                                         placeholder="Enter your Phone number"
-                                        className='form-control'
+                                        className="form-control"
                                         validators={{
                                             required,
                                             isNumber
@@ -109,7 +109,7 @@ class Contact extends Component {
                             <FormGroup row>
                                 <Label htmlFor="email" md={2}>Email</Label>
                                 <Col md={10}>
-                                    <Control.text
+                                    <Control.Text
                                         model=".email"
                                         name="email"
                                         placeholder="Email"
@@ -134,7 +134,7 @@ class Contact extends Component {
                                 <Col md={{ size: 6, offset: 2 }}>
                                     <FormGroup check>
                                         <Label check>
-                                            <Control.checkbox
+                                            <Control.Checkbox
                                                 model=".agree"
                                                 name="agree"
                                                 className='form-check-input'
@@ -144,20 +144,20 @@ class Contact extends Component {
                                     </FormGroup>
                                 </Col>
                                 <Col md={{ size: 3, offset: 1 }}>
-                                    <Control.select
+                                    <Control.Select
                                         model=".select"
                                         name="contactType"
                                         className="form-control"
                                     >
                                         <option>Tel.</option>
                                         <option>Email</option>
-                                    </Control.select>
+                                    </Control.Select>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Label htmlFor="message" md={2}>Your Feedback</Label>
                                 <col md={10}>
-                                    <Control.textarea
+                                    <Control.Textarea
                                         model=".message"
                                         name="message"
                                         rows="12"

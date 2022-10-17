@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardBody, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import { baseURL } from '../../redux/baseURL';
 
 const MenuItem = props => {
     return (
@@ -8,7 +9,7 @@ const MenuItem = props => {
                 <CardBody>
                     <CardImg width="100%"
                         alt={props.dish.name}
-                        src={props.dish.image}
+                        src={baseURL + props.dish.image}
                     />
                     <CardImgOverlay>
                         <CardTitle style={{ cursor: "pointer" }}
