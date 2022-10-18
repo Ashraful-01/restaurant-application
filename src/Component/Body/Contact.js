@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Button, FormGroup, Label, Col } from 'reactstrap';
 import { Form, Control, Errors, actions } from 'react-redux-form';
 import { connect } from 'react-redux';
+import axios from 'axios';
+import { baseURL } from '../../redux/baseURL';
+import { Alert } from 'reactstrap';
+
 
 
 
@@ -20,8 +24,29 @@ const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 
 class Contact extends Component {
+    state = {
+        alertShow: false,
+        alertText: null,
+        alertType: null
+    }
     handleSubmit = values => {
-        console.log(values);
+        // console.log(values);
+        axios.post(baseURL + 'feedback', values)
+            .then(response => response.status)
+            .then(status => {
+                if (status === 201) {
+                    this.setState({
+                        alertShow: true,
+                        alertText: "Submitted successfully",
+                        alertType: "success"
+                    })
+                    setTimeout(() => {
+                        this.setState({
+                            alertShow: false
+                        })
+                    })
+                }
+            })
         this.props.resetFeedbackForm();
 
     }
@@ -30,7 +55,8 @@ class Contact extends Component {
         document.title = "Contact"
         return (
             <div className='container'>
-                <div className='row row-content' style={{ textAlign: "center", paddingLeft: "20px" }}>
+                <div className='row row-content' style={{ textAlign: "left", paddingLeft: "20px" }}>
+                    <Alert isOpen={this.state.alertShow} color={this.state.alertType}>{this.state.alertText}</Alert>
                     <div className="col-12">
                         <h3>Send us your Feedback</h3>
                     </div>
