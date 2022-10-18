@@ -48,11 +48,17 @@ export const dishesLoading = () => ({
     type: actionTypes.DISHES_LOADING
 })
 
+export const dishesFailed = (errMess) => ({
+    type: actionTypes.DISHES_FAILED,
+    payload: errMess
+})
+
 export const fetchDishes = () => dispatch => {
     dispatch(dishesLoading());
 
     axios.get(baseURL + 'dishes')
         .then(response => response.data)
-        .then(dishes => dispatch(loadDishes(dishes)));
+        .then(dishes => dispatch(loadDishes(dishes)))
+        .catch(error => dispatch(dishesFailed(error.message)))
 
 }
