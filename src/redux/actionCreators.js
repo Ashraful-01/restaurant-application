@@ -15,6 +15,22 @@ export const addComment = (dishId, rating, author, comment) => ({
 
 
 })
+export const commentLoading = () => ({
+    type: actionTypes.COMMENT_LOADING
+})
+
+export const loadComments = comments => ({
+    type: actionTypes.LOAD_COMMENTS,
+    payload: comments
+})
+
+export const fetchComments = () => dispatch => {
+    dispatch(commentLoading());
+    axios.get(baseURL + 'comments')
+        .then(response => response.data)
+        .then(comments => dispatch(loadComments(comments)))
+
+}
 
 export const loadDishes = dishes => ({
     type: actionTypes.LOAD_DISHES,
@@ -28,7 +44,7 @@ export const dishesLoading = () => ({
 export const fetchDishes = () => dispatch => {
     dispatch(dishesLoading());
 
-    axios.get(baseURL + "dishes")
+    axios.get(baseURL + 'dishes')
         .then(response => response.data)
         .then(dishes => dispatch(loadDishes(dishes)));
 
